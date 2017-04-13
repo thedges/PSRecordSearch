@@ -9,10 +9,12 @@ Configuration parameters:
 * <b>Card Header Label</b> - Label to put at top of record next to image.
 * <b>LDS Icon for Card</b> - An image to show for the record card. This uses the icons that are details [here](https://www.lightningdesignsystem.com/icons/). Just find your icon. Not the group and name. For example the email icon in the Action Icons group would have a string of "action:email".
 
-Screenshot inside community. Just enter search string and hit 'enter'.
+<b>Screenshot inside community. Just enter search string and hit 'enter'.</b>
+
 ![alt text](https://github.com/thedges/PSRecordSearch/blob/master/Screenshot-Search.png "Community Sample")
 
-Screenshot of Community Builder and component options.
+<b>Screenshot of Community Builder and component options.</b>
+
 ![alt text](https://github.com/thedges/PSRecordSearch/blob/master/Screenshot-Community-Builder.png "Community Builder")
 
 <a href="https://githubsfdeploy.herokuapp.com">
