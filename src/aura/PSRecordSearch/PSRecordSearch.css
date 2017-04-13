@@ -1,0 +1,7 @@
+.THIS .forcePageBlockItemView.full {
+    border-bottom: 0px solid #ffffff;
+}
+
+.THIS .forcePageBlockItemView.full:last-child {
+    border-left: 0px solid #ffffff;
+}

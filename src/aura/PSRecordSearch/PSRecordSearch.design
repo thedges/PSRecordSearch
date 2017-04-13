@@ -1,0 +1,7 @@
+<design:component label="PSRecordSearch">
+	<design:attribute name="sobject" label="SObject To Search" Description="SObject to search"/>
+	<design:attribute name="searchField" label="Field API Name To Search By" Description="Field name to search by"/>
+    <design:attribute name="fieldLabel" label="Label to use for search field" Description="Label to use for search field"/>
+    <design:attribute name="cardHeader" label="Card Header Label" Description="Card header label"/>
+    <design:attribute name="iconName" label="LDS Icon for Card" Description="LDS icon for card"/>
+</design:component>
