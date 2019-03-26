@@ -1,5 +1,7 @@
 # PSRecordSearch
 
+THIS SOFTWARE IS COVERED BY [THIS DISCLAIMER](https://raw.githubusercontent.com/thedges/Disclaimer/master/disclaimer.txt).
+
 Simple Lightning component to provide simple single field search on an SObject. Purpose is to return single record where the search field matches a record uniquely.
 
 Configuration parameters:
