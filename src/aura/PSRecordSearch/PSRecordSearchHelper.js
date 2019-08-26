@@ -1,6 +1,22 @@
 ({
     initSearchField: function(component) {
-        console.log('initSearchField begin...');
+        console.log('initFilterParams begin...');
+    
+        var self = this; // safe reference
+        var searchField = component.get("v.searchField");
+        var sobject = component.get("v.sobject");
+        var action = component.get("c.descSearchField");
+        action.setParams({
+            "objtype": sobject,
+            "searchField": searchField
+        });
+        action.setCallback(self, function(a) {
+            //console.log('initFilterparams complete!');
+            //console.log('retList=' + a.getReturnValue());
+            component.set("v.fieldComp", JSON.parse(a.getReturnValue()));
+        });
+        // Enqueue the action
+        $A.enqueueAction(action);
     },
     executeSearch: function(component)
     {
@@ -8,10 +24,10 @@
 
         var sobject = component.get("v.sobject");
         var searchField = component.get("v.searchField");
-        var searchValue = component.get("v.searchValue");
+        var fieldComp = component.get("v.fieldComp");
 
         var soql = new String();
-        soql = "SELECT Id FROM " + sobject + " WHERE " + searchField + " = '" + searchValue + "'";
+        soql = "SELECT Id FROM " + sobject + " WHERE " + searchField + " = '" + fieldComp.value + "'";
         console.log("SOQL=" + soql);
 
         var action = component.get("c.query");

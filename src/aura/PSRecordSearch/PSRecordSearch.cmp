@@ -1,13 +1,12 @@
-<aura:component controller="PSRecordSearchController" implements="force:appHostable,forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+<aura:component controller="PSRecordSearchController" implements="force:appHostable,forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,lightning:availableForFlowScreens" access="global">
 
   <aura:attribute name="sobject" type="String" default="Case" />
   <aura:attribute name="searchField" type="String" default="CaseNumber" />
-  <aura:attribute name="fieldLabel" type="String" default="Case Number" />
   <aura:attribute name="cardHeader" type="String" default="Driver License" />
   <aura:attribute name="iconName" type="String" default="standard:record" />
 
-  <aura:attribute name="searchValue" type="String" />
   <aura:attribute name="soql" type="String" />
+  <aura:attribute name="fieldComp" type="PSField" />
   <aura:attribute name="rec" type="object" />
 
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
@@ -15,9 +14,9 @@
 
   <div class="slds-form--inline slds-wrap">
     <div class="slds-form-element">
-      <label class="slds-form-element__label" for="searchField">{!v.fieldLabel + ':'}</label>
+      <label class="slds-form-element__label" for="{!v.fieldComp.name + 'Search'}">{!v.fieldComp.label + ':'}</label>
       <div class="slds-form-element__control">
-        <ui:inputText aura:id="searchField" class="slds-input" value="{!v.searchValue}" keyup="{!c.searchEvents}" />
+        <ui:inputText aura:id="{!v.fieldComp.name + 'Search'}" class="slds-input" value="{!v.fieldComp.value}" keyup="{!c.searchEvents}" />
       </div>
     </div>
   </div>

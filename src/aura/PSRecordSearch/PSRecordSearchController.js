@@ -1,6 +1,7 @@
 ({
     doInit: function(component, event, helper) {
         //console.log("doInit called");
+        helper.initSearchField(component);
     },
     searchEvents: function(component, event, helper) {
       //console.log(event.getParams().keyCode);
